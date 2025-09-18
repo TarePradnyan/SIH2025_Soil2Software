@@ -1,0 +1,21 @@
+32_13AnnualAverageRainFall.csv  :-   https://www.data.gov.in/resource/district-wise-annual-average-rainfall-punjab-1970-2021
+
+Table_4.7_Yield_Potato.csv,
+Table_4.7_Yield_Wheat.csv,
+Table_4.7_Area_Barley,
+Table_4.7_Area_Rice.csv,
+Table_4.7_Area_Wheat.csv,
+Table_4.7_Production_Bajra.csv
+
+:-https://www.data.gov.in/catalog/area-production-and-yield-food-grains-cultivation-punjab
+
+
+sm_Punjab_2018.csv   :- https://www.data.gov.in/resource/soil-moisture-punjab-2018
+
+
+Table_6.3_gross_irrigated_area_otherfoodcrops.cs   :- https://www.data.gov.in/resource/district-wise-gross-irrigated-area-punjab-under-other-food-crops-1968-2022-april-march
+
+
+Table_4.24_TotalNPK_Consumption.csv  :-  https://tn.data.gov.in/resource/district-wise-total-npk-fertilizers-consumption-punjab-1974-2022april-march
+
+
