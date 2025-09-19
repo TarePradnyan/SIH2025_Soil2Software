@@ -1,14 +1,14 @@
 :root {
-    --primary-green: #28882b;
-    --light-green: #93b195;
+    --primary-green: #4CAF50;
+    --light-green: #E8F5E9;
     --dark-green: #388E3C;
     --text-color: #333;
-    --background-color: rgba(155, 207, 205, 0.446)
-     ;
+    --background-color: #F9F9F9;
     --card-background: #FFF;
     --border-color: #ddd;
 }
 
+/* Global styles for consistency */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
@@ -19,16 +19,24 @@ body {
 .header {
     background-color: var(--primary-green);
     color: white;
-    padding: 15px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap; 
 }
 
 .logo {
     margin: 0;
     font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .navbar .nav-link {
@@ -40,14 +48,16 @@ body {
     transition: background-color 0.3s;
 }
 
-.navbar .nav-link:hover, .navbar .nav-link.active {
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
     background-color: var(--dark-green);
 }
 
 .main-content {
     padding: 20px;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 0 auto; 
+    box-sizing: border-box;
 }
 
 .ticker-section {
@@ -56,13 +66,11 @@ body {
     overflow: hidden;
     margin-bottom: 20px;
     padding: 10px 0;
-    background-color: rgb(191, 205, 212);
 }
 
 .ticker-container {
     white-space: nowrap;
     animation: scroll-left 25s linear infinite;
-   
 }
 
 .ticker-item {
@@ -108,27 +116,11 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
     cursor: pointer;
-    min-height: 120px; /* Ensures consistent card size */
+    min-height: 120px;
 }
 
 .card:hover {
     transform: translateY(-5px);
-}
-
-.card h3 {
-    margin-top: 0;
-    font-size: 1.1rem;
-    color: var(--dark-green);
-}
-
-.card p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    color: #666;
-}
-
-.university-marketing {
-    margin-top: 30px;
 }
 
 .uni-card {
@@ -139,6 +131,8 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .uni-logo {
@@ -158,19 +152,27 @@ body {
     margin-top: 10px;
 }
 
-/* Responsive Design */
 @media (max-width: 600px) {
-    .dashboard-grid {
-        grid-template-columns: 1fr;
-    }
     .header {
         flex-direction: column;
         text-align: center;
         gap: 10px;
     }
+
+    .navbar {
+        justify-content: center;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .nav-link {
+        padding: 5px 10px;
+    }
+
     .main-content {
         padding: 10px;
     }
+
     .uni-card {
         flex-direction: column;
         text-align: center;
