@@ -18,6 +18,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    min-height: 100vh; /* better than height:100vh for small screens */
+    padding: 10px;      /* prevents overflow */
 }
 
 .login-container {
@@ -26,12 +28,13 @@ body {
 
 .login-card {
     background-color: var(--card-background);
-    padding: 30px;
+    padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 400px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -97,4 +100,29 @@ body {
 
 .hidden {
     display: none;
+}
+
+@media (max-width: 360px) {
+    .login-card {
+        padding: 15px; /* smaller padding so it fits the screen */
+    }
+
+    .logo {
+        font-size: 2rem; /* shrink logo text */
+    }
+
+    .btn-primary {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .input-group input {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
 }
