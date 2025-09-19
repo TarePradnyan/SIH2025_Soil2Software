@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisaan Mitra - Dashboard</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="logo">Kisaan Mitra</h1>
+        <nav class="navbar">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="community.html" class="nav-link">Community</a>
+            <a href="market.html" class="nav-link">Market Prices</a>
+            <a href="soil.html" class="nav-link">Soil Health</a>
+            <a href="login.html" class="nav-link login-btn">Login</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="ticker-section">
+            <div class="ticker-container">
+                <div class="ticker-content" id="newsTicker">
+                    <span class="ticker-item">🌾 Alert: The live market price of wheat has increased by 5% today!</span>
+                    <span class="ticker-item">⚠️ Warning: There is a high chance of heavy rainfall in Amritsar district tomorrow. Prepare your crops accordingly.</span>
+                    <span class="ticker-item">💡 Tip: Use natural pesticides for better soil health and higher crop yield.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-section">
+            <h2 class="section-title">Dashboard</h2>
+            <div class="dashboard-grid">
+                <div class="card weather-card">
+                    <h3>Weather Update</h3>
+                    <div id="weatherInfo">
+                        <p>Loading weather data...</p>
+                    </div>
+                </div>
+                <div class="card advisory-card">
+                    <h3>AI Advisory</h3>
+                    <p>Get personalized solutions for your crops.</p>
+                </div>
+                <a href="market.html" class="card-link">
+                    <div class="card market-card">
+                        <h3>Market Prices</h3>
+                        <p>Live rates & future price predictions</p>
+                    </div>
+                </a>
+                <a href="community.html" class="card-link">
+                    <div class="card community-card">
+                        <h3>Farmer Community</h3>
+                        <p>Connect with other farmers & experts</p>
+                    </div>
+                </a>
+                <a href="soil.html" class="card-link">
+                    <div class="card soil-card">
+                        <h3>Soil Health</h3>
+                        <p>Test your soil and get recommendations</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <section class="university-marketing">
+            <h2 class="section-title">University Tie-ups</h2>
+            <div class="uni-card">
+                <img src="https://via.placeholder.com/150" alt="University Logo" class="uni-logo">
+                <div class="uni-info">
+                    <h3>Punjab Agricultural University</h3>
+                    <p>Learn new farming techniques from the experts.</p>
+                    <a href="#" class="learn-more-btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="home.js"></script>
+</body>
+</html>
