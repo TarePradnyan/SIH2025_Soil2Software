@@ -177,4 +177,99 @@ body {
         flex-direction: column;
         text-align: center;
     }
+<<<<<<< HEAD
 }
+=======
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+span.ticker-item{
+    background-color: rgb(233, 167, 167);
+}
+
+/* For Mobile */
+
+/* Extra mobile refinements */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* shrink base text */
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap; /* allow items to go to next line */
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .navbar .nav-link {
+        flex: 1 1 auto;
+        text-align: center;
+        padding: 6px;
+        font-size: 0.9rem;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .ticker-section {
+        padding: 5px 0;
+    }
+
+    .ticker-item {
+        font-size: 0.8rem;
+        padding-right: 30px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr; /* 1 card per row */
+        gap: 12px;
+    }
+
+    .card {
+        min-height: auto;
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+    }
+
+    .uni-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .uni-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .learn-more-btn {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+}
+>>>>>>> 71349a18c392b7352b05b9072d37596240018a21
