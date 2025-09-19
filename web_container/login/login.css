@@ -5,8 +5,8 @@
     --text-color: #333;
     --background-color: #F9F9F9;
     --card-background: #FFF;
-    --border-color: #bb7272;
-    --error-color: #cd3434;
+    --border-color: #ddd;
+    --error-color: #D32F2F;
 }
 
 body {

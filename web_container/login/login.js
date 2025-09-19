@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Redirect to the dashboard page after successful login
             window.location.href = 'index.html'; 
         } else {
-            otpError.textContent = 'OTP is Incorrect. Please try again.';
+            otpError.textContent = 'Incorrect OTP. Please try again.';
             otpError.style.visibility = 'visible';
         }
     });
