@@ -28,6 +28,10 @@ body {
     flex-direction: row;
 }
 
+h3{
+    color: var(--primary-green);
+}
+
 .logo {
     margin: 0;
     font-weight: 600;
