@@ -21,15 +21,49 @@ body {
     color: white;
     padding: 15px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     flex-wrap: wrap; 
+    flex-direction: row;
 }
 
 .logo {
     margin: 0;
     font-weight: 600;
+    white-space: nowrap;
+
+}
+
+.header-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    order: 1;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto; /* pushes it to the right inside header */
+    margin-right: 15px;
+}
+
+.login-container a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.login-container a:hover,
+.login-container a.active {    
+    background-color: var(--dark-green);
 }
 
 .navbar {
@@ -37,6 +71,9 @@ body {
     gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
+    order: 3;
+    width: 100%;
+    margin-top: 15px;
 }
 
 .navbar .nav-link {
@@ -154,9 +191,23 @@ body {
 
 @media (max-width: 600px) {
     .header {
-        flex-direction: column;
         text-align: center;
         gap: 10px;
+        flex-direction: row;
+    }
+
+    .login-container {
+        margin-left: 0;
+        justify-content: flex-end;
+        width: 100%;
+        margin-left: auto;
+    }
+
+    .login-container a {
+        display: inline-block;
+        margin-top: 5px;
+        padding: 6px 12px;
+        font-size: 0.9rem;
     }
 
     .navbar {
@@ -183,6 +234,7 @@ body {
         justify-content: space-around;
     }
 }
+
 span.ticker-item{
     background-color: rgb(233, 167, 167);
 }
@@ -202,8 +254,17 @@ span.ticker-item{
         padding: 10px;
     }
 
+        .header-top {
+        display: flex;
+        flex-direction: row;       /* logo + login on the same line */
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
     .logo {
         font-size: 1.3rem;
+        white-space: nowrap;
     }
 
     .navbar {
