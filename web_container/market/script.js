@@ -45,7 +45,7 @@ function createLineChart(canvasId, label, data) {
 // Fake data for each crop
 createLineChart('wheatChart', 'Wheat', [2000, 2100, 2200, 2300, 2250, 2400]);
 createLineChart('riceChart', 'Rice', [3000, 3100, 3200, 3300, 3250, 3400]);
-createLineChart('maizeChart', 'Maize', [1500, 1600, 1550, 1650, 1700, 1750]);
+createLineChart('sugarcaneChart', 'Sugarcane', [1500, 1600, 1550, 1650, 1700, 1750]);
 createLineChart('barleyChart', 'Barley', [1800, 1850, 1900, 1950, 2000, 2100]);
-createLineChart('tomatoChart', 'Tomato', [2500, 2600, 2700, 2800, 2750, 2900]);
-createLineChart('potatoChart', 'Potato', [2200, 2250, 2300, 2350, 2400, 2450]);
+createLineChart('cottonChart', 'Cotton', [2500, 2600, 2700, 2800, 2750, 2900]);
+createLineChart('bajreeChart', 'Bajra', [2200, 2250, 2300, 2350, 2400, 2450]);
