@@ -204,7 +204,6 @@ h3{
         margin-left: 0;
         justify-content: flex-end;
         width: 100%;
-        margin-left: auto;
     }
 
     .login-container a {
@@ -218,6 +217,7 @@ h3{
         justify-content: center;
         width: 100%;
         gap: 8px;
+        display: flex;
     }
 
     .nav-link {
@@ -231,11 +231,6 @@ h3{
     .uni-card {
         flex-direction: column;
         text-align: center;
-    }
-    .navbar {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
     }
 }
 
