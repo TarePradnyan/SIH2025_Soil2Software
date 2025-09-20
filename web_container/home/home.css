@@ -269,3 +269,14 @@ span.ticker-item{
         padding: 6px 12px;
     }
 }
+
+
+
+:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}

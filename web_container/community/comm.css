@@ -94,3 +94,13 @@ body {
         padding: 10px;
     }
 }
+
+
+:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}

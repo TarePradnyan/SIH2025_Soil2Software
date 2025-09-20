@@ -90,3 +90,12 @@ body {
     text-align: center;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
+
+:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}

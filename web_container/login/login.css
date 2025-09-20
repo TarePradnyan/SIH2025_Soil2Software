@@ -163,3 +163,12 @@ body {
 .back-btn:hover {
     background-color: #388E3C;
 }
+
+:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}

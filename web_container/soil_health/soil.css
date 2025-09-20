@@ -89,12 +89,6 @@ body {
     cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
-
-    /* Remove mobile tap highlight */
-    -webkit-tap-highlight-color: transparent; /* iOS/Android */
-    -webkit-focus-ring-color: transparent;   /* Safari */
-    outline: none;
-    box-shadow: none;
 }
 
 .free-btn {
@@ -120,15 +114,12 @@ body {
     color: #c8e6c9;
 }   
 
-/* Remove focus/active outline on all devices */
-.btn-version:focus,
-.btn-version:focus-visible,
-.btn-version:active {
+
+:focus {
     outline: none !important;
     box-shadow: none !important;
 }
 
-/* Optional: make links/buttons globally ignore tap highlight */
-button, a {
+* {
     -webkit-tap-highlight-color: transparent;
 }
