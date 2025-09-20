@@ -18,12 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         phoneError.style.visibility = 'hidden';
         
-        // In a real application, this would be an API call to a backend
-        // to send the OTP via SMS service (e.g., Twilio, Firebase)
+        // ✅ Demo: Sending OTP (console only)
         console.log(`Sending OTP to ${phoneNumber}`);
-        alert('OTP sent successfully!');
+        alert('OTP sent successfully! (Demo OTP: 123456)');
         
-        // Show the OTP form and hide the phone form
+        // Show OTP form, hide phone form
         phoneForm.classList.add('hidden');
         otpForm.classList.remove('hidden');
         otpInput.focus();
@@ -41,14 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         otpError.style.visibility = 'hidden';
 
-        // In a real application, this would be an API call to the backend
-        // to verify the OTP.
-        // For simplicity, we'll just check if it's "123456"
+        // ✅ Demo OTP check
         if (otp === '123456') {
             console.log('OTP verified. Login successful!');
-            alert('Login successful! Redirecting to dashboard...');
-            // Redirect to the dashboard page after successful login
-            window.location.href = 'index.html'; 
+            alert('Login successful! Redirecting to Home...');
+
+            // ✅ Save login state
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('username', phoneInput.value);
+
+            // Redirect to Home
+            window.location.href = '../home/index.html'; 
         } else {
             otpError.textContent = 'Incorrect OTP. Please try again.';
             otpError.style.visibility = 'visible';
@@ -57,13 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Simple validation functions
     function validatePhoneNumber(number) {
-        // Regex to check for a 10-digit number
         const regex = /^\d{10}$/;
         return regex.test(number);
     }
 
     function validateOtp(otp) {
-        // Regex to check for a 6-digit number
         const regex = /^\d{6}$/;
         return regex.test(otp);
     }

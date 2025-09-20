@@ -1,18 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Function to fetch weather data (this is a placeholder)
-    function fetchWeather() {
-        const weatherInfoElement = document.getElementById('weatherInfo');
-        
-        // This would be replaced with a real API call
-        // For example, fetching user's location-based weather
-        
-        // Placeholder data for demonstration
-        weatherInfoElement.innerHTML = `
-            <p><strong>Ludhiana, Punjab</strong></p>
-            <p>Temperature: 25°C</p>
-            <p>Condition: Partly Cloudy</p>
-        `;
-    }
+    const loginContainer = document.querySelector('.login-container');
 
-    fetchWeather();
+    // Agar user logged in hai
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+        const username = localStorage.getItem('username') || "User";
+
+        // Login button replace with welcome + logout
+        loginContainer.innerHTML = `
+            <span class="nav-link">👋 Welcome, ${username}</span>
+            <button id="logoutBtn" class="nav-link login-btn">Logout</button>
+        `;
+
+        // Logout functionality
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('username');
+            window.location.reload(); // refresh page
+        });
+    }
 });
