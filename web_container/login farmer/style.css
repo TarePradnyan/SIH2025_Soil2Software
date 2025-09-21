@@ -18,12 +18,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    min-height: 100vh; /* better than height:100vh for small screens */
-    padding: 10px;      /* prevents overflow */
+
 }
 
 .login-container {
     padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .login-card {
@@ -106,32 +108,6 @@ body {
     display: none;
 }
 
-@media (max-width: 360px) {
-    .login-card {
-        position: relative;
-        padding: 15px; /* smaller padding so it fits the screen */
-    }
-
-    .logo {
-        font-size: 2rem; /* shrink logo text */
-    }
-
-    .btn-primary {
-        padding: 12px;
-        font-size: 1rem;
-    }
-
-    .input-group input {
-        padding: 10px;
-        font-size: 0.95rem;
-    }
-
-    .tagline {
-        font-size: 0.9rem;
-        margin-bottom: 15px;
-    }
-}
-
 .back-btn {
     position: absolute;
     top: -10px;
@@ -157,4 +133,30 @@ body {
 
 .back-btn:hover {
     background-color: #388E3C;
+}
+
+@media (max-width: 360px) {
+    .login-card {
+        position: relative;
+        padding: 15px; /* smaller padding so it fits the screen */
+    }
+
+    .logo {
+        font-size: 2rem; /* shrink logo text */
+    }
+
+    .btn-primary {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .input-group input {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
 }
