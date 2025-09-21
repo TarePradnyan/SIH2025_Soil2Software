@@ -135,6 +135,20 @@ body {
     background-color: #388E3C;
 }
 
+.uni-login{
+    color: var(--primary-green);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: text-decoration 0.3s;
+}
+
+.uni-login:hover {
+    text-decoration: underline;
+
+}
+
 @media (max-width: 360px) {
     .login-card {
         position: relative;
