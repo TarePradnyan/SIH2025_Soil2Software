@@ -22,6 +22,7 @@
     0% {
         transform: translateX(100%);
     }
+
     100% {
         transform: translateX(-100%);
     }
@@ -88,7 +89,7 @@
     }
 }
 
-span.ticker-item{
+span.ticker-item {
     background-color: rgb(233, 167, 167);
 }
 
@@ -111,7 +112,8 @@ span.ticker-item{
     }
 
     .dashboard-grid {
-        grid-template-columns: 1fr; /* 1 card per row */
+        grid-template-columns: 1fr;
+        /* 1 card per row */
         gap: 12px;
     }
 
@@ -144,4 +146,27 @@ span.ticker-item{
         font-size: 0.85rem;
         padding: 6px 12px;
     }
+}
+
+/* Add to your existing CSS file */
+.lang-switcher {
+    display: flex;
+    gap: 5px;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.lang-btn.active {
+    background-color: white;
+    color: var(--primary-green);
+    font-weight: bold;
 }

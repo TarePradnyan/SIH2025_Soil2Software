@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kisaan Mitra - Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../global/style.css">
+    <link rel="stylesheet" href="..//web_container/global/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -18,17 +18,24 @@
         <div class="header-top">
             <h1 class="logo">Kisaan Mitra</h1>
             <div class="login-container">
-                <a href="../login_farmer/index.html" class="nav-link login-btn">Login</a>
+                <a href="../web_container/login_farmer/index.html" class="nav-link login-btn"data-translate="nav_login">Login</a>
             </div>
         </div>
         <nav class="navbar">
-            <a href="index.html" class="nav-link active">Home 🏠</a>
-            <a href="../community/index.html" class="nav-link">Community 🌱</a>
-            <a href="../crop_sugg/index.html" class="nav-link">Crop Suggestion❓</a>
-            <a href="../market/index.html" class="nav-link">Market Prices 💰</a>
-            <a href="../soil_health/index.html" class="nav-link">Soil Health 🌾</a>
+            <a href="index.html" class="nav-link active" data-translate="nav_home">Home 🏠</a>
+            <a href="..//web_container/community/index.html" class="nav-link"data-translate="nav_community">Community 🌱</a>
+            <a href="../web_container/crop_sugg/index.html" class="nav-link">Crop Suggestion❓</a>
+            <a href="../web_container/market/index.html" class="nav-link"data-translate="nav_market">Market Prices 💰</a>
+            <a href="..//web_container/soil_health/index.html" class="nav-link"data-translate="nav_soil">Soil Health 🌾</a>      
         </nav>
-    </header>
+        </nav>
+    <div class="lang-switcher">
+        <button id="lang-en" class="lang-btn" data-translate="lang_en">English</button>
+        <button id="lang-pa" class="lang-btn" data-translate="lang_pa">ਪੰਜਾਬੀ</button>
+        <button id="lang-hi" class="lang-btn" data-translate="lang_hi">हिंदी</button>
+    </div>
+</header>
+
 
     <main class="main-content">
         <section class="ticker-section">
@@ -56,19 +63,19 @@
                     <h3>AI Advisory</h3>
                     <p>Get personalized solutions for your crops.</p>
                 </div>
-                <a href="../market/index.html" class="card-link">
+                <a href="../web_container/market/index.html" class="card-link">
                     <div class="card market-card">
                         <h3>Market Prices</h3>
                         <p>Live rates & future price predictions</p>
                     </div>
                 </a>
-                <a href="../community/index.html" class="card-link">
+                <a href="../web_container/community/index.html" class="card-link">
                     <div class="card community-card">
                         <h3>Farmer Community</h3>
                         <p>Connect with other farmers & experts</p>
                     </div>
                 </a>
-                <a href="../soil_health/index.html" class="card-link">
+                <a href="../web_container/soil_health/index.html" class="card-link">
                     <div class="card soil-card">
                         <h3>Soil Health</h3>
                         <p>Test your soil and get recommendations</p>
@@ -91,6 +98,8 @@
     </main>
 
     <script src="script.js"></script>
+      <script src="lang_switch.js"></script>
+        <script src="language.js"></script>
 </body>
 
 </html>
