@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisaan Mitra - Community</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/comm.css') }}" />
+    <!-- <link rel="stylesheet" href="../home/home.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="../static/js/comm.js"></script>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo">Kisaan Mitra</h1>
+        <nav class="navbar">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/community" class="nav-link active">Community</a>
+            <a href="/market" class="nav-link">Market Prices</a>
+            <a href="/soil_health" class="nav-link">Soil Health</a>
+            <a href="..//login/login.html" class="nav-link login-btn">Login</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+    <h2 class="section-title">Farmer Community + AI Chatbot</h2>
+    <div class="community-container">
+        <div class="chat-interface" style="width:100%;max-width:510px;margin:auto;">
+            <p>Chat with the AI or post a query to the community.</p>
+            <div id="real-community-chat" style="background:#fafafa; border:1px solid #ddd; padding:16px 8px; border-radius:9px;">
+                <h3 style="margin:5px 0; color:#448d34; font-weight:600;">
+                  Community Chat (Pincode: {{ pincode if pincode else "Not set" }})
+                </h3>
+                <div id="community-messages" style="max-height:210px; overflow-y:auto; border:1px solid #eee; background:#fff; padding:8px; border-radius:5px; margin-bottom:9px;">
+                </div>
+                <input type="text" id="cc-message" placeholder="Type a message..." style="width:74%">
+                <button id="cc-send-btn" type="button">Send</button>
+            </div>
+        </div>
+        <div class="posts-list">
+            <p>Community posts will appear here...</p>
+        </div>
+    </div>
+</main>
+
+
+
+    <div class="content">
+        {% block content%}
+            
+                <div class="message-top">
+                    <h2>
+                        PinCode: {{ pincode}}
+                    </h2>
+                </div>
+            
+
+            <div class="messages" id="messages">
+                <div class="inputs">
+                    <input type="text" rows="3" placeholder="message" name="message" id="message">
+                    <button type="button" name="send" id="send-btn" onclick="sendMessage()">
+                        Send
+                    </button>
+                </div>
+            </div>
+
+                <script type="text/javascript">
+                var socketio = io();
+                const sendMessage = () =>{
+                    console.log("send");
+                };
+            </script>
+            
+        {% endblock %}
+    </div>
+
+    <script>socket.emit("init", { name: sessionName, pincode: sessionPincode });</script>
+    <div id="chat-box" style="border:1px solid black; height:200px; overflow:auto;"></div>
+    
+
+    <input type="text" id="messageInput" placeholder="Type Message...">
+    <button onclick="sendMessage()">Send</button>
+    
+
+<script>
+    // Ensure session data is passed in by backend
+var sessionName = "{{ session.get('name','') }}";
+var sessionPincode = "{{ session.get('pincode','') }}";
+var socket = io();
+
+function appendMessageHTML(msg, isStatus) {
+    var box = document.getElementById('community-messages');
+    var div = document.createElement('div');
+    if(isStatus) {
+        div.style='color:#888888;font-size:0.97em;';
+        div.textContent = msg;
+    } else {
+        div.innerHTML = '<b>' + msg + '</b>';
+    }
+    box.appendChild(div);
+    box.scrollTop = box.scrollHeight;
+}
+
+socket.on("connect", function() {
+    if(sessionName && sessionPincode) {
+        socket.emit("init",{name: sessionName, pincode: sessionPincode});
+    }
+});
+
+socket.on("message", function(data) {
+    appendMessageHTML(data, false);
+});
+
+socket.on("status", function(data) {
+    appendMessageHTML(data, true);
+});
+
+document.getElementById("cc-send-btn").onclick = function() {
+    var box = document.getElementById('cc-message');
+    var t = box.value.trim();
+    if(t) {
+        socket.emit("message", { name: sessionName, pincode: sessionPincode, msg:t });
+        box.value = '';
+    }
+};
+
+</script>
+</body>
+</html>

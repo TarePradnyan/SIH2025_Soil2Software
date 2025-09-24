@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kisaan Mitra - Dashboard</title>    
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -14,10 +14,10 @@
     <header class="header">
         <h1 class="logo">Kisaan Mitra</h1>
         <nav class="navbar">
-            <a href="home.html" class="nav-link active">Home</a>
-            <a href="../community/comm.html" class="nav-link">Community</a>
-            <a href="../market/market.html" class="nav-link">Market Prices</a>
-            <a href="../soil_health/soil.html" class="nav-link">Soil Health</a>
+            <a href="/" class="nav-link active">Home</a>
+            <a href="/community" class="nav-link">Community</a>
+            <a href="/market" class="nav-link">Market Prices</a>
+            <a href="/soil_health" class="nav-link">Soil Health</a>
             <a href="../login/login.html" class="nav-link login-btn">Login</a>
         </nav>
     </header>
@@ -46,13 +46,13 @@
                     <h3>AI Advisory</h3>
                     <p>Get personalized solutions for your crops.</p>
                 </div>
-                <a href="../market/market.html" class="card-link">
+                <a href="/market" class="card-link">
                     <div class="card market-card">
                         <h3>Market Prices</h3>
                         <p>Live rates & future price predictions</p>
                     </div>
                 </a>
-                <a href="../community/comm.html" class="card-link">
+                <a href="/community" class="card-link">
                     <div class="card community-card">
                         <h3>Farmer Community</h3>
                         <p>Connect with other farmers & experts</p>

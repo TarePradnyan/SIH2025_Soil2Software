@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center;    /* Centers vertically */
+            min-height: 100vh;      /* Ensures body takes full viewport height */
+            margin: 0;              /* Removes default body margin */
+        }
+    </style>
+</head>
+<body>
+
+
+
+<p>
+    <form method="POST">
+        <h3>Coummunity</h3>
+        <div>
+            <label>Name: </label>
+            <input type="text" name="name" placeholder="Please Enter you name" value=" {{ name }} ">
+        </div>
+        <div class="pincode">
+            <input type="text" placeholder="Pincode" name="pincode" value=" {{ pincode }} " >
+            <button type="submit" name="join">Join Community</button>
+        </div>
+        <button type="submit" name="create">Create Room</button>
+    </form>
+</p>
+
+{% if error %}
+    <ul>
+        <li>{{ error }}</li>
+    </ul>
+{% endif %}
+
+</body>
+</html>

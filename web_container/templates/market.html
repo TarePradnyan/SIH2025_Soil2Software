@@ -4,21 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kisaan Mitra - Market Prices</title>
-    <link rel="stylesheet" href="..//home/home.css" />
-    <link rel="stylesheet" href="market.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/market.css') }}" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/market.js') }}"></script>
   </head>
   <body>
     <header class="header">
       <h1 class="logo">Kisaan Mitra</h1>
       <nav class="navbar">
-        <a href="..//home/home.html" class="nav-link">Home</a>
-        <a href="../community/comm.html" class="nav-link">Community</a>
-        <a href="..//market/market.html" class="nav-link active">Market Prices</a>
-        <a href="..//soil_health/soil.html" class="nav-link">Soil Health</a>
+        <a href="/" class="nav-link">Home</a>
+        <a href="/community" class="nav-link">Community</a>
+        <a href="/market " class="nav-link active">Market Prices</a>
+        <a href="/soil_health" class="nav-link">Soil Health</a>
         <a href="../login/login.html" class="nav-link login-btn">Login</a>
       </nav>
     </header>
@@ -59,6 +59,6 @@
       </div>
     </main>
 
-    <script src="market.js"></script>
+    <script src="../static/js/market.js"></script>
   </body>
 </html>
