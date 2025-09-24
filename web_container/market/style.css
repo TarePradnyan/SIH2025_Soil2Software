@@ -329,7 +329,7 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
+        /* @media (max-width: 768px) {
             .main-content {
                 padding: 1rem;
             }
@@ -364,7 +364,7 @@
             .chart-container {
                 height: 200px;
             }
-        }
+        } */
 
         /* Additional Utility Classes */
         .text-center { text-align: center; }
