@@ -129,9 +129,22 @@ def market():
 def soil():
     return render_template("soil.html")
 
-@app.route("/profile", methods=["POST", "GET"])
+@app.route("/login", methods=["POST", "GET"])
 def profile():
-    return render_template("info.html", name="Pradnyan", pincode= "401502")
+
+    if request.method =='POST':
+        name = request.form.get("name")
+        phoneNumber = request.form.get("phonenumber")
+        pincode = request.form.get("pincode")
+
+        print(f"{name} logged in with {phoneNumber} from {pincode}")
+
+        
+        redirect("/")
+
+
+
+    return render_template("login.html")
 
 @app.route("/accounts", methods=["POST", "GET"])
 def accounts():
