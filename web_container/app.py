@@ -16,7 +16,7 @@ rooms={}
 def home():
     return render_template("home.html")
 
-@app.route("/community/", methods=["POST", "GET"])
+@app.route("/community", methods=["POST", "GET"])
 def community():
     pincode = session.get("pincode")
     # if pincode not in rooms:
@@ -29,11 +29,11 @@ def community():
 def crop_Suggestion():
     return render_template("crop_sugg.html")
 
-@app.route("/market/", methods=["POST", "GET"])
+@app.route("/market", methods=["POST", "GET"])
 def market():
     return render_template("market.html")
 
-@app.route("/soil_health/", methods=["POST", "GET"])
+@app.route("/soil_health", methods=["POST", "GET"])
 def soil():
     return render_template("soil_health.html")
 
