@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('username', phoneInput.value);
 
             // Redirect to Home
-            window.location.href = 'index.html'; 
+            window.location.href = '../index.html'; 
         } else {
             otpError.textContent = 'Incorrect OTP. Please try again.';
             otpError.style.visibility = 'visible';
