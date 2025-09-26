@@ -176,7 +176,9 @@ h3{
 }
 
 
-/* --- NEW: AI Chatbox Styles --- */
+/* Add this to the end of static/css/global.css */
+
+/* --- UNIVERSAL AI CHATBOX STYLES --- */
 .chat-toggle-btn {
     position: fixed;
     bottom: 25px;
