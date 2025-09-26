@@ -2,52 +2,171 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kisaan Mitra - Community</title>
-    <link rel="stylesheet" href="../static/css/comm.css">
-    <link rel="stylesheet" href="../static/css/global.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kisaan Mitra - Community</title>
+  <link rel="stylesheet" href="../static/css/comm.css">
+  <link rel="stylesheet" href="../static/css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-top">
-            <h1 class="logo">Kisaan Mitra</h1>
-            <div class="login-container">
-                <a href="./farmer_login.html" class="nav-link login-btn">Login</a>
-            </div>
-        </div>
+  <header class="header">
+    <div class="header-top">
+      <h1 class="logo">Kisaan Mitra</h1>
+      <div class="login-container">
+        <a href="./farmer_login.html" class="nav-link login-btn">Login</a>
+      </div>
+    </div>
 
-        <nav class="navbar">
-            <a href="./home.html" class="nav-link">Home 🏠</a>
-            <a href="./comm.html" class="nav-link active">Community 🌱</a>
-            <a href="./crop_sugg.html" class="nav-link">Crop Suggestion❓</a>
-            <a href="./market.html" class="nav-link">Market Prices 💰</a>
-            <a href="./soil_health.html" class="nav-link">Soil Health 🌾</a>
+    <nav class="navbar">
+      <a href="./home.html" class="nav-link">Home 🏠</a>
+      <a href="./comm.html" class="nav-link active">Community 🌱</a>
+      <a href="./crop_sugg.html" class="nav-link">Crop Suggestion❓</a>
+      <a href="./market.html" class="nav-link">Market Prices 💰</a>
+      <a href="./soil_health.html" class="nav-link">Soil Health 🌾</a>
 
-        </nav>
-    </header>
+    </nav>
+  </header>
 
-    <main class="main-content">
-        <h2 class="section-title">Farmer Community + AI Chatbot</h2>
-        <div class="community-container">
-            <div class="chat-interface">
-                <p>Chat with the AI or post a query to the community.</p>
-            </div>
-            <div class="posts-list">
-                <p>Community posts will appear here...</p>
-            </div>
-        </div>
-    </main>
+  <main class="main-content">
+<header>
+  <h1>Farmers Community - Crop Selection & Social Comments</h1>
+</header>
 
-    <script src="../static/js/comm.js"></script>
-    <script src="../script.js"></script>
-    <script src="../static/js/chatbox.js"></script>
-    
-    
+<!-- Crop selection -->
+<section class="crop-selection-section">
+  <h2>Select Your Crop</h2>
+  <div class="crop-selection">
+    <label data-crop="wheat" title="Wheat">
+      <img src="../img/crop/wheat_1.webp" alt="Wheat" />
+      <span>Wheat</span>
+      <input type="radio" name="crop" value="wheat" />
+    </label>
+    <label data-crop="rice" title="Rice">
+      <img src="../img/crop/rice_1.webp" alt="Rice" />
+      <span>Rice</span>
+      <input type="radio" name="crop" value="rice" />
+    </label>
+    <label data-crop="maize" title="Maize">
+      <img src="../img/crop/maize_1.webp" alt="Maize" />
+      <span>Maize</span>
+      <input type="radio" name="crop" value="maize" />
+    </label>
+    <label data-crop="sugarcane" title="Sugarcane">
+      <img src="../img/crop/sugarcane_1.webp" alt="Sugarcane" />
+      <span>Sugarcane</span>
+      <input type="radio" name="crop" value="sugarcane" />
+    </label>
+    <label data-crop="cotton" title="Cotton">
+      <img src="../img/crop/cotton_1.webp" alt="Cotton" />
+      <span>Cotton</span>
+      <input type="radio" name="crop" value="cotton" />
+    </label>
+    <label data-crop="barley" title="Barley">
+      <img src="../img/crop/barley_1.webp" alt="Barley" />
+      <span>Barley</span>
+      <input type="radio" name="crop" value="barley" />
+    </label>
+    <label data-crop="mustard" title="Mustard">
+      <img src="../img/crop/gram_1.webp" alt="Mustard" />
+      <span>Mustard</span>
+      <input type="radio" name="crop" value="mustard" />
+    </label>
+  </div>
+</section>
+
+<!-- Upload photo and voice -->
+<section class="upload-section">
+  <h2>Upload Photo & Voice Recording</h2>
+  <form id="upload-form">
+    <label for="photo-upload">Upload Photo</label>
+    <input type="file" id="photo-upload" name="photo-upload" accept="image/*" />
+
+    <label for="voice-recording">Upload Voice Recording</label>
+    <input type="file" id="voice-recording" name="voice-recording" accept="audio/*" />
+
+    <button type="submit">Submit</button>
+  </form>
+  <div id="upload-result"></div>
+</section>
+
+<!-- Community comments -->
+<section class="community-section">
+  <h2>Community Disease Posts & Comments</h2>
+  <ul id="posts-list">
+    <li class="post" data-id="1">
+      <div class="post-header">
+        <b>Leaf Rust Disease</b>
+        <button class="expert-verify-btn">Mark as Expert Verified</button>
+        <span class="expert-tag" hidden>Expert Verified</span>
+      </div>
+      <p class="post-text">My wheat crops have reddish-brown pustules on leaves.</p>
+
+      <div class="post-actions">
+        <button class="like-btn">👍 <span class="like-count">12</span></button>
+        <button class="reply-btn">Reply</button>
+        <button class="record-btn">🎙️ Record Reply</button>
+      </div>
+
+      <ul class="replies-list">
+        <li><b>Rajdeep</b>: Try using neem oil spray weekly.</li>
+        <li><b>Simran</b>: Maintain proper irrigation to reduce humidity.</li>
+        <li><b>Harjit</b>: Crop rotation with non-host crops helps.</li>
+        <li><b>Expert</b>: Use certified fungicides at recommended doses.</li>
+      </ul>
+    </li>
+    <li class="post" data-id="2">
+      <div class="post-header">
+        <b>Powdery Mildew Disease</b>
+        <button class="expert-verify-btn">Mark as Expert Verified</button>
+        <span class="expert-tag" hidden>Expert Verified</span>
+      </div>
+      <p class="post-text">White powder-like coating on mustard leaves noticed.</p>
+
+      <div class="post-actions">
+        <button class="like-btn">👍 <span class="like-count">7</span></button>
+        <button class="reply-btn">Reply</button>
+        <button class="record-btn">🎙️ Record Reply</button>
+      </div>
+
+      <ul class="replies-list">
+        <li><b>Balbir</b>: Remove infected leaves early.</li>
+        <li><b>Expert</b>: Spray sulfur dust for control.</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<!-- Audio Reply Modal -->
+<div id="audio-reply-modal" hidden>
+  <div class="modal-content">
+    <h3>Record your reply</h3>
+    <label for="language-select" class="sr-only">Select language for speech recognition</label>
+    <select id="language-select">
+      <option value="en-IN">English</option>
+      <option value="hi-IN">Hindi</option>
+      <option value="pa-IN">Punjabi</option>
+    </select>
+    <button id="start-recording">Start</button>
+    <button id="stop-recording" disabled>Stop</button>
+    <p id="transcript" aria-live="polite" aria-atomic="true"></p>
+    <button id="submit-reply" disabled>Submit</button>
+    <button id="cancel-reply">Cancel</button>
+  </div>
+</div>
+
+
+
+  </main>
+
+  <script src="../static/js/comm.js"></script>
+  <script src="../script.js"></script>
+  <script src="../static/js/chatbox.js"></script>
+
+
 </body>
 
 </html>
