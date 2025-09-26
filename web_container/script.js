@@ -78,4 +78,66 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         weatherInfo.innerHTML = `<p>⚠️ Geolocation not supported.</p>`;
     }
+
+
+
+
+    // ----------------------------
+    // 🤖 AI CHATBOX
+    // ----------------------------
+    const chatToggleButton = document.getElementById('chat-toggle-btn');
+    const chatPopup = document.getElementById('chat-popup');
+    const chatCloseButton = document.getElementById('chat-close-btn');
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input');
+    const chatMessages = document.getElementById('chat-messages');
+
+    if (chatToggleButton) {
+        // Toggle chat popup visibility
+        chatToggleButton.addEventListener('click', () => {
+            chatPopup.classList.toggle('show');
+        });
+    }
+
+    if (chatCloseButton) {
+        // Close chat popup
+        chatCloseButton.addEventListener('click', () => {
+            chatPopup.classList.remove('show');
+        });
+    }
+    
+    if (chatForm) {
+        // Handle message submission
+        chatForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const userMessage = chatInput.value.trim();
+    
+            if (userMessage) {
+                // Display user's message
+                addMessage(userMessage, 'user-message');
+                chatInput.value = '';
+    
+                // Simulate bot response after 1 second
+                setTimeout(() => {
+                    addMessage("This feature is currently under progress.", 'bot-message');
+                }, 1000);
+            }
+        });
+    }
+
+    // Function to add a new message to the chat
+    function addMessage(text, className) {
+        if (!chatMessages) return; // a safety check
+
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message', className);
+        
+        const p = document.createElement('p');
+        p.textContent = text;
+        messageElement.appendChild(p);
+        
+        chatMessages.appendChild(messageElement);
+        // Auto-scroll to the latest message
+        chatMessages.scrollTop = chatMessages.scrollHeight; 
+    }
 });
