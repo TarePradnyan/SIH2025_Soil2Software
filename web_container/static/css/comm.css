@@ -176,6 +176,7 @@ header {
 }
 .replies-list li {
   margin-bottom: 0.6rem;
+  margin-left: 10px;
   word-wrap: break-word;
 }
 
