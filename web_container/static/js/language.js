@@ -2,10 +2,10 @@
 const translations = {
     'en': {
         // Global
-        'nav_home': 'Home',
-        'nav_community': 'Community',
-        'nav_market': 'Market Prices',
-        'nav_soil': 'Soil Health',
+        'nav_home': 'Home🏠',
+        'nav_community': 'Community🌱',
+        'nav_market': 'Market Prices💰',
+        'nav_soil': 'Soil Health🌾',
         'nav_login': 'Login',
         'lang_en': 'English',
         'lang_pa': 'Punjabi',
@@ -56,11 +56,10 @@ const translations = {
     },
     'pa': {
         // Global
-        'nav_home': 'ਮੁੱਖ ਪੰਨਾ',
-        'nav_community': 'ਕਮਿਊਨਿਟੀ',
-        'nav_market': 'ਮਾਰਕੀਟ ਰੇਟ',
-        'nav_soil': 'ਮਿੱਟੀ ਦੀ ਸਿਹਤ',
-        'nav_login': 'ਲਾਗਇਨ',
+        'nav_home': 'ਮੁੱਖ ਪੰਨਾ🏠',
+        'nav_community': 'ਕਮਿਊਨਿਟੀ🌱',
+        'nav_market': 'ਮਾਰਕੀਟ ਰੇਟ💰',
+        'nav_soil': 'ਮਿੱਟੀ ਦੀ ਸਿਹਤ🌾',
         'lang_en': 'ਇੰਗਲਿਸ਼',
         'lang_pa': 'ਪੰਜਾਬੀ',
         'lang_hi': 'ਹਿੰਦੀ',
@@ -110,10 +109,10 @@ const translations = {
     },
     'hi': {
         // Global
-        'nav_home': 'होम',
-        'nav_community': 'समुदाय',
-        'nav_market': 'बाजार भाव',
-        'nav_soil': 'मिट्टी की सेहत',
+        'nav_home': 'होम🏠',
+        'nav_community': 'समुदाय🌱',
+        'nav_market': 'बाजार भाव💰',
+        'nav_soil': 'मिट्टी की सेहत🌾',
         'nav_login': 'लॉगिन',
         'lang_en': 'अंग्रेजी',
         'lang_pa': 'पंजाबी',
