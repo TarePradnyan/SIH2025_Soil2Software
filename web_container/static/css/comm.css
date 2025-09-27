@@ -235,3 +235,18 @@ header {
   background: #f0f9f0;
   white-space: pre-wrap;
 }
+
+.post-image {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.post-image img {
+  width: 30%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-right: 10px;
+} 
