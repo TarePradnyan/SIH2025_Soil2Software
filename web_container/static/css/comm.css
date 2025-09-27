@@ -8,3 +8,229 @@
 .chat-interface, .posts-list {
     margin-bottom: 20px;
 }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 2rem 1rem;
+  background: #fefefe;
+  color: #222;
+}
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #aaa;
+  padding-bottom: 0.8rem;
+}
+/* Crop selection styling */
+.crop-selection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.crop-selection label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 110px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px #ddd;
+  padding: 0.5rem 0.7rem;
+  background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  user-select: none;
+}
+.crop-selection input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.crop-selection img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.crop-selection span {
+  margin-top: 0.4rem;
+  font-weight: 600;
+}
+.crop-selection input[type=radio]:checked + span,
+.crop-selection input[type=radio]:checked + img + span {
+  color: #257143;
+}
+.crop-selection input[type=radio]:checked + img {
+  box-shadow: 0 0 0 3px #257143;
+}
+.crop-selection label:hover {
+  transform: scale(1.06);
+  box-shadow: 0 6px 20px rgba(37, 113, 67, 0.3);
+}
+
+/* Upload section */
+.upload-section {
+  background: white;
+  padding: 1.2rem 2rem;
+  max-width: 500px;
+  margin: 0 auto 3rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(37, 113, 67, 0.1);
+}
+.upload-section label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+}
+.upload-section input[type="file"] {
+  padding: 0.3em;
+  width: 100%;
+  cursor: pointer;
+}
+.upload-section button {
+  margin-top: 1rem;
+  background: #257143;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 700;
+  width: 100%;
+}
+#upload-result {
+  margin-top: 1rem;
+  color: #2a7a30;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Community & comment styling (same as previous) */
+.community-section {
+  max-width: 720px;
+  margin: 0 auto 4rem;
+}
+.community-section ul {
+  list-style: none;
+  padding: 0;
+}
+.post {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(37, 113, 67, 0.1);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2.3rem;
+  position: relative;
+}
+.post-header {
+  font-weight: 700;
+  font-size: 1.15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.expert-tag {
+  background: gold;
+  color: #555;
+  padding: 0.2em 0.9em;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-left: 8px;
+}
+.post-text {
+  margin: 0.6rem 0 1.2rem 0;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.4;
+}
+.post-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.like-btn, .reply-btn, .record-btn, .expert-verify-btn {
+  background-color: #257143;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 18px;
+  cursor: pointer;
+  font-weight: 700;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+.like-btn:hover, .reply-btn:hover, .record-btn:hover, .expert-verify-btn:hover {
+  background-color: #1b4f2f;
+}
+.replies-list {
+  list-style: none;
+  padding-left: 22px;
+  margin-top: 1.25rem;
+  border-left: 4px solid #257143;
+  font-size: 0.95rem;
+  color: #333;
+}
+.replies-list li {
+  margin-bottom: 0.6rem;
+  word-wrap: break-word;
+}
+
+/* Modal Styles */
+#audio-reply-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1500;
+}
+#audio-reply-modal[hidden] {
+  display: none;
+}
+.modal-content {
+  background: white;
+  padding: 2rem 2.5rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+}
+.modal-content select {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: 6px 12px;
+  border-radius: 12px;
+  border: 1px solid #444;
+}
+.modal-content button {
+  margin: 0.4rem 0.7rem;
+  padding: 10px 22px;
+  border: none;
+  background: #257143;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.modal-content button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+#transcript {
+  margin-top: 1.2rem;
+  min-height: 3em;
+  font-style: italic;
+  color: #444;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 12px 16px;
+  text-align: left;
+  background: #f0f9f0;
+  white-space: pre-wrap;
+}
