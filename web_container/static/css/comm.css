@@ -59,10 +59,10 @@ header {
 }
 .crop-selection input[type=radio]:checked + span,
 .crop-selection input[type=radio]:checked + img + span {
-  color: #257143;
+  color: var(--primary-green);
 }
 .crop-selection input[type=radio]:checked + img {
-  box-shadow: 0 0 0 3px #257143;
+  box-shadow: 0 0 0 3px var(--primary-green);
 }
 .crop-selection label:hover {
   transform: scale(1.06);
@@ -90,7 +90,7 @@ header {
 }
 .upload-section button {
   margin-top: 1rem;
-  background: #257143;
+  background: var(--primary-green);
   color: white;
   border: none;
   cursor: pointer;
@@ -101,7 +101,7 @@ header {
 }
 #upload-result {
   margin-top: 1rem;
-  color: #2a7a30;
+  color: var(--success-color);
   font-weight: 700;
   text-align: center;
 }
@@ -153,7 +153,7 @@ header {
   flex-wrap: wrap;
 }
 .like-btn, .reply-btn, .record-btn, .expert-verify-btn {
-  background-color: #257143;
+  background-color: var(--primary-green);
   border: none;
   color: white;
   padding: 8px 14px;
@@ -170,7 +170,7 @@ header {
   list-style: none;
   padding-left: 22px;
   margin-top: 1.25rem;
-  border-left: 4px solid #257143;
+  border-left: 4px solid var(--primary-green);
   font-size: 0.95rem;
   color: #333;
 }
@@ -212,7 +212,7 @@ header {
   margin: 0.4rem 0.7rem;
   padding: 10px 22px;
   border: none;
-  background: #257143;
+  background: var(--primary-green);
   color: white;
   border-radius: 12px;
   cursor: pointer;
